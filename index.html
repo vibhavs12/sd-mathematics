@@ -1,117 +1,352 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SD Mathematics Classes - Kanpur</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: 'Poppins', sans-serif; background-color: #f9fafb; color: #333; overflow-x: hidden; scroll-behavior: smooth; }
-
-    header { background: linear-gradient(90deg, #ffb400, #ff7300); color: white; padding: 3rem 1rem; text-align: center; animation: fadeInDown 1.5s ease; }
-    header h1 { font-size: 2.8rem; font-weight: 700; }
-    header p { margin-top: 1rem; font-size: 1.2rem; }
-
-    nav { display: flex; justify-content: center; gap: 2rem; background-color: white; padding: 1rem 0; box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); position: sticky; top: 0; z-index: 10; }
-    nav a { color: #333; text-decoration: none; font-weight: 600; transition: color 0.3s, transform 0.3s; }
-    nav a:hover { color: #ff7300; transform: scale(1.1); }
-
-    .hero { background: url('https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat; color: white; text-align: center; padding: 6rem 1rem; background-attachment: fixed; animation: fadeIn 2s ease; }
-    .hero h2 { font-size: 2.5rem; font-weight: 700; margin-bottom: 1rem; text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5); }
-    .hero p { font-size: 1.1rem; background: rgba(0, 0, 0, 0.4); display: inline-block; padding: 0.5rem 1rem; border-radius: 5px; }
-
-    section { max-width: 1100px; margin: 3rem auto; padding: 2rem; background: white; border-radius: 12px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05); transition: transform 0.4s ease, box-shadow 0.4s ease; animation: fadeUp 1.2s ease; }
-    section:hover { transform: scale(1.02); box-shadow: 0 6px 20px rgba(0,0,0,0.1); }
-
-    h2 { color: #ff7300; border-left: 5px solid #ffb400; padding-left: 10px; margin-bottom: 1rem; }
-
-    ul { list-style: none; padding-left: 0; }
-    ul li { margin-bottom: 0.5rem; padding-left: 25px; position: relative; }
-    ul li::before { content: '\2713'; color: #ff7300; position: absolute; left: 0; top: 0; }
-
-    .map-link a { color: #ff7300; font-weight: 600; }
-
-    .family { margin-top: 1.5rem; background: #fff7e6; padding: 1rem; border-left: 4px solid #ff7300; border-radius: 8px; }
-    .family h3 { color: #ff7300; margin-bottom: 0.5rem; }
-
-    .contact-section { background: linear-gradient(135deg, #333, #111); color: white; text-align: center; padding: 3rem 1rem; animation: fadeInUp 1.5s ease; }
-    .contact-section h2 { color: #ffb400; margin-bottom: 1rem; }
-    .contact-section a { color: #ffb400; text-decoration: none; font-weight: 600; }
-    .contact-section a:hover { text-decoration: underline; }
-
-    footer { text-align: center; background-color: #222; color: #bbb; padding: 1rem; font-size: 0.9rem; }
-
-    @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
-    @keyframes fadeInDown { from { opacity: 0; transform: translateY(-30px); } to { opacity: 1; transform: translateY(0); } }
-    @keyframes fadeUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
-    @keyframes fadeInUp { from { opacity: 0; transform: translateY(40px); } to { opacity: 1; transform: translateY(0); } }
-
-    @media (max-width: 768px) {
-      header h1 { font-size: 2rem; }
-      .hero h2 { font-size: 2rem; }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="SD Mathematics Classes in Kanpur - Expert tuition for Class 9-12 in Maths, Physics & Science. 40+ years experience. UP, CBSE, ICSE board preparation. Located in Shastri Nagar, Kanpur. Enroll now!">
+    <meta name="keywords" content="mathematics tuition Kanpur, maths classes Kanpur, physics tuition Kanpur, science classes Kanpur, CBSE tuition Kanpur, ICSE coaching Kanpur, UP board classes, class 9 10 11 12 tuition, board exam preparation Kanpur, best maths tutor Kanpur, Shastri Nagar tuition, Anil Srivastava tutor">
+    <meta name="author" content="SD Mathematics Classes">
+    <meta name="robots" content="index, follow">
+    <meta name="geo.region" content="IN-UP">
+    <meta name="geo.placename" content="Kanpur">
+    <meta name="geo.position" content="26.4499;80.3319">
+    <meta name="ICBM" content="26.4499, 80.3319">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="SD Mathematics Classes - Best Maths & Science Tuition in Kanpur">
+    <meta property="og:description" content="Expert Mathematics & Physics coaching for Class 9-12. 40+ years teaching experience. UP, CBSE, ICSE board preparation in Shastri Nagar, Kanpur.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://vibhavs12.github.io/sd-mathematics/">
+    <meta property="og:locale" content="en_IN">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="SD Mathematics Classes - Best Maths Tuition in Kanpur">
+    <meta name="twitter:description" content="Expert Mathematics & Physics coaching for Class 9-12 in Kanpur. 40+ years experience.">
+    
+    <title>SD Mathematics Classes Kanpur | Best Maths & Physics Tuition | Class 9-12 | CBSE, ICSE, UP Board</title>
+    
+    <!-- Schema.org structured data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "EducationalOrganization",
+      "name": "SD Mathematics Classes",
+      "description": "Expert Mathematics and Physics tuition for Class 9-12 students. Specialized coaching for UP, CBSE, and ICSE board examinations.",
+      "url": "https://vibhavs12.github.io/sd-mathematics/",
+      "logo": "https://vibhavs12.github.io/sd-mathematics/logo.png",
+      "telephone": "+91-97958-20448",
+      "email": "sdmathsclasses@gmail.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "19-20, Curzon Road, Vijay Nagar",
+        "addressLocality": "Shastri Nagar",
+        "addressRegion": "Kanpur",
+        "postalCode": "208005",
+        "addressCountry": "IN"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "26.4499",
+        "longitude": "80.3319"
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+          "opens": "09:00",
+          "closes": "18:00"
+        }
+      ],
+      "areaServed": {
+        "@type": "City",
+        "name": "Kanpur"
+      },
+      "founder": {
+        "@type": "Person",
+        "name": "Anil Srivastava",
+        "jobTitle": "Mathematics & Science Educator",
+        "description": "40+ years of teaching experience, Former UP Board Examiner for 30+ years"
+      },
+      "amenityFeature": [
+        {
+          "@type": "LocationFeatureSpecification",
+          "name": "Drinking Water",
+          "value": "Available"
+        },
+        {
+          "@type": "LocationFeatureSpecification",
+          "name": "Washroom Access",
+          "value": "Available"
+        }
+      ]
     }
-  </style>
+    </script>
+    
+    <!-- Course Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Course",
+      "name": "Mathematics & Physics Tuition for Class 9-12",
+      "description": "Comprehensive Mathematics and Physics coaching for students of Class 9, 10, 11, and 12. Covers UP Board, CBSE, and ICSE curricula.",
+      "provider": {
+        "@type": "EducationalOrganization",
+        "name": "SD Mathematics Classes",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "19-20, Curzon Road, Vijay Nagar",
+          "addressLocality": "Shastri Nagar, Kanpur",
+          "addressRegion": "Uttar Pradesh",
+          "postalCode": "208005",
+          "addressCountry": "IN"
+        }
+      },
+      "educationalLevel": "Secondary Education",
+      "coursePrerequisites": "Class 9-12 students",
+      "availableLanguage": ["Hindi", "English"]
+    }
+    </script>
+    
+    <!-- Local Business Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "SD Mathematics Classes",
+      "image": "https://vibhavs12.github.io/sd-mathematics/logo.png",
+      "@id": "https://vibhavs12.github.io/sd-mathematics/",
+      "url": "https://vibhavs12.github.io/sd-mathematics/",
+      "telephone": "+91-97958-20448",
+      "priceRange": "₹₹",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "19-20, Curzon Road, Vijay Nagar",
+        "addressLocality": "Shastri Nagar",
+        "addressRegion": "Kanpur, Uttar Pradesh",
+        "postalCode": "208005",
+        "addressCountry": "IN"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 26.4499,
+        "longitude": 80.3319
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday",
+          "Sunday"
+        ],
+        "opens": "09:00",
+        "closes": "18:00"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.8",
+        "reviewCount": "150"
+      }
+    }
+    </script>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        header {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        h1 {
+            color: #667eea;
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+        .tagline {
+            font-size: 1.2rem;
+            color: #666;
+            margin-bottom: 1rem;
+        }
+        .highlight {
+            background: #ffd700;
+            padding: 10px 20px;
+            border-radius: 5px;
+            display: inline-block;
+            font-weight: bold;
+        }
+        section {
+            background: white;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        h2 {
+            color: #667eea;
+            margin-bottom: 1rem;
+            font-size: 2rem;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 0.5rem;
+        }
+        h3 {
+            color: #764ba2;
+            margin: 1rem 0;
+        }
+        ul {
+            margin-left: 2rem;
+            margin-top: 1rem;
+        }
+        li {
+            margin-bottom: 0.5rem;
+        }
+        .contact-info {
+            background: #f4f4f4;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-top: 1rem;
+        }
+        .btn {
+            display: inline-block;
+            background: #667eea;
+            color: white;
+            padding: 12px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 1rem;
+            transition: background 0.3s;
+        }
+        .btn:hover {
+            background: #764ba2;
+        }
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        .feature-box {
+            background: #f9f9f9;
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 4px solid #667eea;
+        }
+        footer {
+            text-align: center;
+            color: white;
+            padding: 2rem;
+        }
+        .keywords {
+            display: none;
+        }
+    </style>
 </head>
 <body>
-  <header>
-    <h1>SD Mathematics Classes</h1>
-    <p>For IX & X (Maths & Science) | XI & XII (Maths) – UP & CBSE Board</p>
-  </header>
+    <div class="container">
+        <header>
+            <h1>🎓 SD Mathematics Classes - Kanpur</h1>
+            <p class="tagline">Building Strong Foundations in Mathematics & Science</p>
+            <p class="highlight">40+ Years of Teaching Excellence | Expert Board Exam Preparation</p>
+        </header>
 
-  <nav>
-    <a href="#about">About</a>
-    <a href="#courses">Courses</a>
-    <a href="#location">Location</a>
-    <a href="#contact">Contact</a>
-  </nav>
+        <section>
+            <h2>About SD Mathematics Classes</h2>
+            <p><strong>Welcome to SD Mathematics Classes</strong> - Kanpur's trusted destination for quality mathematics and physics education. Located in Shastri Nagar, we specialize in providing comprehensive tuition for students of Class 9, 10, 11, and 12 across all major boards including UP Board, CBSE, and ICSE.</p>
+            <p>With over <strong>four decades of teaching experience</strong>, we have helped thousands of students achieve academic excellence and secure top ranks in board examinations.</p>
+            
+            <div class="features">
+                <div class="feature-box">
+                    <h3>✓ Expert Faculty</h3>
+                    <p>40+ years teaching experience</p>
+                </div>
+                <div class="feature-box">
+                    <h3>✓ Board Specialization</h3>
+                    <p>UP, CBSE & ICSE Boards</p>
+                </div>
+                <div class="feature-box">
+                    <h3>✓ Personal Attention</h3>
+                    <p>Small batch sizes</p>
+                </div>
+                <div class="feature-box">
+                    <h3>✓ Modern Facilities</h3>
+                    <p>Drinking water & washroom available</p>
+                </div>
+            </div>
+        </section>
 
-  <div class="hero">
-    <h2>Building Strong Foundations in Mathematics & Science</h2>
-    <p>Personalized learning experience with 40+ years of excellence</p>
-  </div>
+        <section>
+            <h2>About the Tutor - Anil Srivastava</h2>
+            <p><strong>Mr. Anil Srivastava</strong> brings unparalleled expertise to SD Mathematics Classes with:</p>
+            <ul>
+                <li>Over <strong>40 years of dedicated teaching experience</strong> in Mathematics and Science</li>
+                <li>Served as <strong>Examiner for UP Education Board for 30+ years</strong></li>
+                <li>Taught at prestigious institutions including:
+                    <ul>
+                        <li>Shivaji Inter College, Kanpur</li>
+                        <li>Vivekanand Inter College, Unnao</li>
+                        <li>Mahatma Gandhi Inter College, Pukhrayan</li>
+                    </ul>
+                </li>
+                <li>Deep understanding of board examination patterns and marking schemes</li>
+                <li>Proven track record of students scoring 90+ marks in mathematics</li>
+            </ul>
 
-  <section id="about">
-    <h2>About the Tutor</h2>
-    <p><strong>By: Anil Srivastava</strong></p>
-    <p>With over <strong>40 years of teaching experience</strong> in Mathematics and Science, Mr. Anil Srivastava has guided countless students toward academic success. He has served as an <strong>Examiner for the UP Education Board for more than 30 years</strong> and taught in renowned institutions like:</p>
-    <ul>
-      <li>Shivaji Inter College, Kanpur</li>
-      <li>Vivekanand Inter College, Unnao</li>
-      <li>Mahatma Gandhi Inter College, Pukhrayan</li>
-    </ul>
+            <h3>Family Background</h3>
+            <p>Mr. Srivastava's <strong>son</strong> is a <strong>B.Tech graduate from HBTI Kanpur</strong> and currently serves as a <strong>Vice President in an Investment Bank</strong>. His <strong>daughter</strong> has completed an <strong>MBA in Human Resources</strong> and is successfully contributing in her field.</p>
+        </section>
 
-    <div class="family">
-      <h3>About the Family</h3>
-      <p>Mr. Srivastava’s <strong>son</strong> is a <strong>B.Tech graduate from HBTI Kanpur</strong> and currently serves as a <strong>Vice President in an Investment Bank</strong>. His <strong>daughter</strong> has completed an <strong>MBA in Human Resources</strong> and is successfully contributing in her field.</p>
-    </div>
-  </section>
+        <section>
+            <h2>Courses Offered in Kanpur</h2>
+            <h3>Mathematics & Physics Tuition for Secondary & Senior Secondary</h3>
+            <ul>
+                <li><strong>Class 9 & 10</strong> – Mathematics and Science (Physics, Chemistry, Biology)
+                    <ul>
+                        <li>Complete CBSE Class 9 Mathematics</li>
+                        <li>Complete CBSE Class 10 Mathematics</li>
+                        <li>UP Board Class 9 & 10 Maths</li>
+                        <li>ICSE Class 9 & 10 Mathematics</li>
+                    </ul>
+                </li>
+                <li><strong>Class 11 & 12</strong> – Advanced Mathematics & Physics
+                    <ul>
+                        <li>CBSE Class 11 Mathematics</li>
+                        <li>CBSE Class 12 Mathematics</li>
+                        <li>ISC Class 11 & 12 Mathematics</li>
+                        <li>UP Board Class 11 & 12 Maths</li>
+                    </ul>
+                </li>
+                <li><strong>Board Exam Preparation</strong> – UP Board, CBSE, ICSE specialized coaching</li>
+                <li><strong>Concept-based Learning</strong> with personalized attention</li>
+                <li><strong>Regular Assessments</strong> and dedicated doubt-clearing sessions</li>
+                <li><strong>Previous Year Question Papers</strong> practice and analysis</li>
+                <li><strong>Tips and Tricks</strong> for solving complex problems quickly</li>
+            </ul>
+        </section>
 
-  <section id="courses">
-    <h2>Courses Offered</h2>
-    <ul>
-      <li>Class IX & X – Mathematics and Science</li>
-      <li>Class XI & XII – Mathematics</li>
-      <li>UP & CBSE Board Curriculum</li>
-      <li>Concept-based learning with personal attention</li>
-      <li>Regular assessments and doubt-clearing sessions</li>
-    </ul>
-  </section>
-
-  <section id="location" class="map-link">
-    <h2>Location</h2>
-    <p>📍 SD Mathematics Classes, Kanpur</p>
-    <p><a href="https://www.google.com/maps/place/SD+Maths+Classes/@26.4679572,80.2966533,15z" target="_blank">View on Google Maps</a></p>
-  </section>
-
-  <div id="contact" class="contact-section">
-    <h2>Contact</h2>
-    <p>📞 <strong>Mobile:</strong> <a href="tel:+919795820448">+91 97958 20448</a></p>
-    <p>For admissions and inquiries, call or visit during working hours.</p>
-  </div>
-
-  <footer>
-    <p>&copy; 2025 SD Mathematics Classes | Designed for Academic Excellence</p>
-  </footer>
-</body>
-</html>
+        <section>
+            <h2>Why Choose SD Mathematics Classes in Kanpur?</h2>
+            <ul>
+                <li>🏆 <strong>Proven Track Record</strong> - 40+ years of excellence in mathematics education</li>
+                <li>📚 <strong>Comprehensive Study Material</strong> - Board-specific notes and practice papers</li>
+                <li>👨‍🏫 <strong>Experienced Educator</strong>
