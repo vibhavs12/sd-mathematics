@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SD Mathematics Classes - Kanpur</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Poppins', sans-serif; background-color: #f9fafb; color: #333; overflow-x: hidden; scroll-behavior: smooth; }
+
+    header { background: linear-gradient(90deg, #ffb400, #ff7300); color: white; padding: 3rem 1rem; text-align: center; animation: fadeInDown 1.5s ease; }
+    header h1 { font-size: 2.8rem; font-weight: 700; }
+    header p { margin-top: 1rem; font-size: 1.2rem; }
+
+    nav { display: flex; justify-content: center; gap: 2rem; background-color: white; padding: 1rem 0; box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); position: sticky; top: 0; z-index: 10; }
+    nav a { color: #333; text-decoration: none; font-weight: 600; transition: color 0.3s, transform 0.3s; }
+    nav a:hover { color: #ff7300; transform: scale(1.1); }
+
+    .hero { background: url('https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat; color: white; text-align: center; padding: 6rem 1rem; background-attachment: fixed; animation: fadeIn 2s ease; }
+    .hero h2 { font-size: 2.5rem; font-weight: 700; margin-bottom: 1rem; text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5); }
+    .hero p { font-size: 1.1rem; background: rgba(0, 0, 0, 0.4); display: inline-block; padding: 0.5rem 1rem; border-radius: 5px; }
+
+    section { max-width: 1100px; margin: 3rem auto; padding: 2rem; background: white; border-radius: 12px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05); transition: transform 0.4s ease, box-shadow 0.4s ease; animation: fadeUp 1.2s ease; }
+    section:hover { transform: scale(1.02); box-shadow: 0 6px 20px rgba(0,0,0,0.1); }
+
+    h2 { color: #ff7300; border-left: 5px solid #ffb400; padding-left: 10px; margin-bottom: 1rem; }
+
+    ul { list-style: none; padding-left: 0; }
+    ul li { margin-bottom: 0.5rem; padding-left: 25px; position: relative; }
+    ul li::before { content: '\2713'; color: #ff7300; position: absolute; left: 0; top: 0; }
+
+    .map-link a { color: #ff7300; font-weight: 600; }
+
+    .family { margin-top: 1.5rem; background: #fff7e6; padding: 1rem; border-left: 4px solid #ff7300; border-radius: 8px; }
+    .family h3 { color: #ff7300; margin-bottom: 0.5rem; }
+
+    .contact-section { background: linear-gradient(135deg, #333, #111); color: white; text-align: center; padding: 3rem 1rem; animation: fadeInUp 1.5s ease; }
+    .contact-section h2 { color: #ffb400; margin-bottom: 1rem; }
+    .contact-section a { color: #ffb400; text-decoration: none; font-weight: 600; }
+    .contact-section a:hover { text-decoration: underline; }
+
+    footer { text-align: center; background-color: #222; color: #bbb; padding: 1rem; font-size: 0.9rem; }
+
+    @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+    @keyframes fadeInDown { from { opacity: 0; transform: translateY(-30px); } to { opacity: 1; transform: translateY(0); } }
+    @keyframes fadeUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+    @keyframes fadeInUp { from { opacity: 0; transform: translateY(40px); } to { opacity: 1; transform: translateY(0); } }
+
+    @media (max-width: 768px) {
+      header h1 { font-size: 2rem; }
+      .hero h2 { font-size: 2rem; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>SD Mathematics Classes</h1>
+    <p>For IX & X (Maths & Science) | XI & XII (Maths) – UP & CBSE Board</p>
+  </header>
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#courses">Courses</a>
+    <a href="#location">Location</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <div class="hero">
+    <h2>Building Strong Foundations in Mathematics & Science</h2>
+    <p>Personalized learning experience with 40+ years of excellence</p>
+  </div>
+
+  <section id="about">
+    <h2>About the Tutor</h2>
+    <p><strong>By: Anil Srivastava</strong></p>
+    <p>With over <strong>40 years of teaching experience</strong> in Mathematics and Science, Mr. Anil Srivastava has guided countless students toward academic success. He has served as an <strong>Examiner for the UP Education Board for more than 30 years</strong> and taught in renowned institutions like:</p>
+    <ul>
+      <li>Shivaji Inter College, Kanpur</li>
+      <li>Vivekanand Inter College, Unnao</li>
+      <li>Mahatma Gandhi Inter College, Pukhrayan</li>
+    </ul>
+
+    <div class="family">
+      <h3>About the Family</h3>
+      <p>Mr. Srivastava’s <strong>son</strong> is a <strong>B.Tech graduate from HBTI Kanpur</strong> and currently serves as a <strong>Vice President in an Investment Bank</strong>. His <strong>daughter</strong> has completed an <strong>MBA in Human Resources</strong> and is successfully contributing in her field.</p>
+    </div>
+  </section>
+
+  <section id="courses">
+    <h2>Courses Offered</h2>
+    <ul>
+      <li>Class IX & X – Mathematics and Science</li>
+      <li>Class XI & XII – Mathematics</li>
+      <li>UP & CBSE Board Curriculum</li>
+      <li>Concept-based learning with personal attention</li>
+      <li>Regular assessments and doubt-clearing sessions</li>
+    </ul>
+  </section>
+
+  <section id="location" class="map-link">
+    <h2>Location</h2>
+    <p>📍 SD Mathematics Classes, Kanpur</p>
+    <p><a href="https://www.google.com/maps/place/SD+Maths+Classes/@26.4679572,80.2966533,15z" target="_blank">View on Google Maps</a></p>
+  </section>
+
+  <div id="contact" class="contact-section">
+    <h2>Contact</h2>
+    <p>📞 <strong>Mobile:</strong> <a href="tel:+919795820448">+91 97958 20448</a></p>
+    <p>For admissions and inquiries, call or visit during working hours.</p>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 SD Mathematics Classes | Designed for Academic Excellence</p>
+  </footer>
+</body>
+</html>
