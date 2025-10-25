@@ -1,120 +1,397 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>SD Mathematics Classes</title>
-  <meta name="description" content="SD Mathematics Classes | Building strong foundations in Mathematics & Science" />
-  <link rel="stylesheet" href="styles.css" />
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>SD Mathematics Classes — Kanpur</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800;900&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#f6fbff;
+    --card:#ffffff;
+    --muted:#64748b;
+    --accent:#2563eb;
+    --accent-2:#60a5fa;
+    --glass: rgba(37,99,235,0.06);
+    --radius:14px;
+    --max:1200px;
+    --txt:#0b1220;
+  }
+  *{box-sizing:border-box}
+  html,body{height:100%;margin:0;font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:var(--txt);-webkit-font-smoothing:antialiased;background:linear-gradient(180deg,#f7fbff 0%, #eef6ff 80%)}
+  a{color:inherit}
+  
+  /* Standard content wrapper for header, footer, and sections */
+  .wrap-content{max-width:var(--max);margin:0 auto;padding:0 28px}
+  
+  /*
+  ********************************
+  * NEW HERO CSS (HIGH-CONTRAST) *
+  ********************************
+  */
+  .hero-strong{
+    background:#05294a;
+    color:#fff;
+    padding:48px 0;
+    margin-top: 18px; 
+  }
+  .hero-strong .wrap-inner-content{
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display:grid;
+    grid-template-columns:1fr 360px;
+    gap:28px;
+    align-items:center;
+  }
+  
+  .hero-strong .kicker{color:rgba(255,255,255,0.85);font-weight:600;letter-spacing:0.06em;margin-bottom:8px;font-size:0.85rem;text-transform: uppercase;}
+  .hero-strong h1{font-size:2.8rem;margin:0 0 10px;color:#fff;line-height:1.1;font-weight: 900;}
+  .badge{display:inline-block;background:#ffb703;color:#05294a;padding:8px 14px;border-radius:999px;font-weight:800;margin-bottom:18px; font-size: 0.95rem;}
+  .short{color:rgba(255,255,255,0.9);margin:0 0 28px;line-height:1.55; font-size: 1.1rem;}
+  .ctas{display:flex;gap:12px; flex-wrap: wrap;}
+  .cta{display:inline-flex;align-items:center;gap:8px;padding:12px 18px;border-radius:12px;text-decoration:none;font-weight:700; transition: background 0.3s, box-shadow 0.3s;}
+  .primary{background:#ff6b6b;color:#fff;border:0;box-shadow:0 8px 28px rgba(0,0,0,0.3); font-weight: 800;}
+  .primary:hover{background:#ff5252;box-shadow:0 6px 20px rgba(0,0,0,0.4);}
+  .secondary{background:transparent;color:#fff;border:2px solid rgba(255,255,255,0.25);}
+  .secondary:hover{background:rgba(255,255,255,0.1);}
+  .hero-right{background:rgba(255,255,255,0.06);padding:20px;border-radius:12px; border: 1px solid rgba(255,255,255,0.1);}
+  blockquote{color:#eaf6ff;font-weight:700;margin:0 0 14px;font-size:1.05rem; line-height: 1.4;}
+  .tutor{display:flex;gap:12px;align-items:center}
+  
+  /* Modified avatar to hold an image */
+  .avatar{
+      width:64px;
+      height:64px;
+      border-radius:50%;
+      overflow: hidden; /* Ensure image respects border-radius */
+      background: #fff; /* Use white background as a visual ring/border */
+      padding: 3px;
+      box-shadow: 0 0 15px rgba(156,196,255,0.4);
+      /* Removed gradient and centering styles */
+  }
+
+  .name{font-weight:800;color:#fff; font-size: 1.1rem;}
+  .cred{color:rgba(255,255,255,0.8);font-size:0.92rem}
+  @media (max-width:1150px){
+    .hero-strong .wrap-inner-content{padding: 0 28px;}
+  }
+  @media (max-width:980px){
+    .hero-strong .wrap-inner-content{grid-template-columns:1fr;gap:24px;}
+    .hero-right{order:2}
+  }
+  @media (max-width:640px) {
+    .hero-strong h1{font-size: 2.2rem;}
+    .hero-strong{padding: 30px 0;}
+    .ctas{flex-direction: column;}
+    .cta{justify-content: center; width: 100%;}
+  }
+  /*
+  ********************************
+  * END NEW HERO CSS
+  ********************************
+  */
+
+
+  /* Header */
+  header{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:8px 0}
+  .brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:inherit}
+  
+  /* RESTORED original text logo styles */
+  .logo{
+    width:54px;height:54px;border-radius:12px;background:linear-gradient(135deg,var(--accent),var(--accent-2));display:grid;place-items:center;color:#042033;font-weight:900;font-size:18px;box-shadow:0 8px 30px rgba(37,99,235,0.12)
+  }
+
+  .brand .title{font-weight:800}
+  nav{display:flex;gap:14px;align-items:center}
+  nav a{color:var(--muted);text-decoration:none;padding:8px 10px;border-radius:10px;font-weight:600}
+  nav a:hover{color:var(--accent);background:rgba(37,99,235,0.04)}
+  .mobile-toggle{display:none;border:0;background:none;font-size:20px;color:var(--muted)}
+
+  /* Sections */
+  section{margin-top:48px}
+  .card{background:var(--card);padding:24px;border-radius:14px;border:1px solid rgba(11,44,116,0.04);box-shadow:0 10px 30px rgba(10,20,40,0.03)}
+  .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  @media (max-width:980px){.grid-3{grid-template-columns:repeat(2,1fr)}}
+  @media (max-width:560px){.grid-3{grid-template-columns:1fr}}
+  .grid-header{margin-bottom:20px;text-align:center}
+  h2.section-title{margin:0 0 4px;font-size:32px;font-weight:800}
+  .muted{color:var(--muted)}
+  .text-center{text-align:center}
+
+  /* Course Card Specifics */
+  .course-card .title{font-size:18px;font-weight:800;margin-bottom:8px;color:var(--accent)}
+  .course-card ul{list-style:none;padding:0;margin:12px 0 0}
+  .course-card li{
+    margin-top:6px;
+    display:flex;
+    align-items:center;
+    gap:8px;
+    font-size:14px;
+    color:var(--muted);
+  }
+  .check-icon{color:var(--accent);font-weight:800}
+
+  /* Map */
+  .mapwrap{border-radius:14px;overflow:hidden;border:1px solid rgba(11,44,116,0.04);height:280px;box-shadow:0 10px 30px rgba(10,20,40,0.03);margin-top:20px}
+
+  footer{margin-top:48px;text-align:center;color:var(--muted);font-size:13px;padding-bottom:16px;border-top:1px solid rgba(11,44,116,0.04);padding-top:24px}
+
+  /* Mobile behavior */
+  @media (max-width:640px){
+    nav{display:none}
+    .mobile-toggle{display:block}
+    .hero-card{padding:28px}
+    .hero-side{order:2}
+    .visual{height:220px;margin-top:14px}
+    .hero{gap:14px}
+    .hero-actions{flex-direction:column}
+    .btn{width:100%;justify-content:center}
+    section{margin-top:32px}
+    h2.section-title{font-size:24px}
+    .lead{font-size:16px}
+  }
+</style>
 </head>
 <body>
-  <header class="site-header">
-    <div class="container header-inner">
-      <div class="brand">
-        <div class="logo">SD<span class="accent">Math</span></div>
-        <div class="small">Building Strong Foundations</div>
-      </div>
-      <nav class="nav">
+  
+  <div class="wrap-content">
+    <header>
+      <a class="brand" href="#">
+      <div class="logo" aria-hidden="true" style="font-family: serif; font-size: 28px;">&pi;</div>
+        <div>
+          <div class="title">SD Mathematics Classes</div>
+          <div style="font-size:13px;color:var(--muted)">Kanpur | Academic Excellence Since 1985</div>
+        </div>
+      </a>
+
+      <nav aria-label="Main navigation">
         <a href="#about">About</a>
         <a href="#courses">Courses</a>
-        <a href="#location">Location</a>
         <a href="#contact">Contact</a>
       </nav>
-      <button class="menu-btn" aria-label="menu">☰</button>
+
+      <button class="mobile-toggle" aria-label="Open menu" onclick="toggleMobile()">☰</button>
+    </header>
+
+    <div id="mobileNav" style="display:none;margin-top:12px">
+      <nav style="display:flex;flex-direction:column;gap:10px;background:var(--card);padding:10px;border-radius:10px;border:1px solid rgba(11,44,116,0.04)">
+        <a href="#about" onclick="toggleMobile()">About</a>
+        <a href="#courses" onclick="toggleMobile()">Courses</a>
+        <a href="#contact" onclick="toggleMobile()">Contact</a>
+      </nav>
     </div>
-  </header>
+  </div>
 
   <main>
-    <section class="hero">
-      <div class="container hero-inner">
-        <h1>Building Strong Foundations in Mathematics & Science</h1>
-        <p class="lead">Personalized learning experience with 40+ years of excellence</p>
-        <a class="btn primary" href="#courses">Explore Courses</a>
-      </div>
-    </section>
-
-    <section id="about" class="section container about">
-      <h2>About the Tutor</h2>
-      <div class="about-grid">
-        <div class="about-text">
-          <p><strong>By</strong> Anil Srivastava</p>
-          <p>With over 40 years of teaching experience in Mathematics and Science, Mr. Anil Srivastava has guided countless students toward academic success. He served as an Examiner for the UP Education Board for more than 30 years.</p>
-          <h4>Institutions Taught At</h4>
-          <ul>
-            <li>Shivaji Inter College, Kanpur</li>
-            <li>Vivekanand Inter College, Unnao</li>
-            <li>Mahatma Gandhi Inter College, Pukhrayan</li>
-          </ul>
+    <section class="hero-strong" aria-labelledby="hero-heading">
+      <div class="wrap-inner-content">
+        <div class="hero-left">
+          <div class="kicker">BUILDING STRONG FOUNDATIONS IN MATHEMATICS & SCIENCE</div>
+          <h1 id="hero-heading">Academic Mastery in Kanpur</h1>
+          <div class="badge">40+ Years Proven Excellence</div>
+          <p class="short">Expert tuition for **Class IX & X (Maths & Science)** and **XI & XII (Maths)**. UP & CBSE aligned, concept-based, personalised attention.</p>
+          <div class="ctas">
+            <a class="cta primary" href="tel:+919795820448">📞 Call +91 97958 20448</a>
+            <a class="cta secondary" href="#courses">View Course Details</a>
+          </div>
         </div>
-        <aside class="about-side">
-          <h4>About the Family</h4>
-          <p><strong>Son</strong> B.Tech HBTI Kanpur, Vice President at an Investment Bank</p>
-          <p><strong>Daughter</strong> MBA Human Resources, established professional</p>
+
+        <aside class="hero-right" aria-label="Tutor spotlight">
+          <blockquote>“Knowledge is Power — Mathematics is the Key”</blockquote>
+          <div class="tutor">
+            <div class="avatar" role="img" aria-label="Mr. Anil Srivastava's photo">
+              <img src="logo.jpg" alt="Mr. Anil Srivastava" style="width:100%; height:100%; border-radius:50%; object-fit:cover;">
+            </div>
+            <div>
+              <div class="name">Mr. Anil Srivastava</div>
+              <div class="cred">Ex-Examiner, UP Board • 40+ Years Teaching</div>
+            </div>
+          </div>
         </aside>
       </div>
     </section>
 
-    <section id="courses" class="section container courses">
-      <h2>Courses</h2>
-      <div class="card-grid">
-        <article class="card">
-          <h3>Class IX &amp; X</h3>
-          <p><strong>Subjects</strong> Mathematics &amp; Science</p>
-          <p><strong>Board</strong> UP &amp; CBSE</p>
-          <p><strong>Highlights</strong> Concept-based learning; Personal attention</p>
-          <a class="btn" href="#contact">Enroll</a>
-        </article>
-
-        <article class="card">
-          <h3>Class XI &amp; XII</h3>
-          <p><strong>Subjects</strong> Mathematics</p>
-          <p><strong>Board</strong> UP &amp; CBSE</p>
-          <p><strong>Highlights</strong> Regular assessments; Doubt-clearing sessions</p>
-          <a class="btn" href="#contact">Enroll</a>
-        </article>
-      </div>
-    </section>
-
-    <section id="location" class="section container location">
-      <h2>Location</h2>
-      <p><strong>SD Mathematics Classes</strong>, Kanpur</p>
-      <p><a class="link" target="_blank" rel="noopener" href="https://www.google.com/maps/search/SD+Mathematics+Classes+Kanpur">View on Google Maps</a></p>
-      <div class="map-placeholder">Map preview available on Google Maps link above</div>
-    </section>
-
-    <section id="contact" class="section container contact">
-      <h2>Contact</h2>
-      <p><strong>Mobile</strong> +91 97958 20448</p>
-      <p>For admissions and inquiries, call or visit during working hours.</p>
-
-      <form class="contact-form" onsubmit="submitForm(event)">
-        <label>
-          Name
-          <input type="text" name="name" required />
-        </label>
-        <label>
-          Email
-          <input type="email" name="email" />
-        </label>
-        <label>
-          Message
-          <textarea name="message" rows="4" required></textarea>
-        </label>
-        <div class="form-actions">
-          <button class="btn primary" type="submit">Send</button>
+    <div class="wrap-content">
+      <section id="about">
+        <div class="grid-header">
+          <div class="kicker">Meet the Educator</div>
+          <h2 class="section-title">Mr. Anil Srivastava: Mentor and Master Educator</h2>
         </div>
-        <div id="form-status" class="form-status" aria-live="polite"></div>
-      </form>
-    </section>
+        
+        <div class="card" style="padding: 40px; background: linear-gradient(180deg, #fff, #f3f8ff);">
+          
+          <div style="margin-bottom: 24px;">
+            <h3 style="font-size: 24px; margin-top: 0; margin-bottom: 8px; font-weight: 800; color: var(--accent);">
+                Academic Credentials
+            </h3>
+            <p class="lead" style="font-size: 17px; margin-bottom: 12px; font-weight: 600; color: var(--muted);">
+                With over **40 years of dedication** to Mathematics and Science, Mr. Anil Srivastava is not just a teacher, but a career mentor. He is an esteemed **Ex-Examiner for the UP Education Board** with more than 30 years of experience in state-level evaluations.
+            </p>
+            <p class="muted" style="font-size: 15px; margin-bottom: 0;">
+                His tenure includes teaching at prominent institutions such as:
+            </p>
+            <ul style="list-style: none; padding: 0; margin: 12px 0 0; display: flex; flex-wrap: wrap; gap: 10px 30px;">
+                <li style="font-weight: 700; color: var(--txt); display: flex; align-items: center; gap: 8px;">
+                    <span style="color: var(--accent); font-size: 18px;">★</span> Shivaji Inter College, Kanpur
+                </li>
+                <li style="font-weight: 700; color: var(--txt); display: flex; align-items: center; gap: 8px;">
+                    <span style="color: var(--accent); font-size: 18px;">★</span> Vivekanand Inter College, Unnao
+                </li>
+                <li style="font-weight: 700; color: var(--txt); display: flex; align-items: center; gap: 8px;">
+                    <span style="color: var(--accent); font-size: 18px;">★</span> Mahatma Gandhi Inter College, Pukhrayan
+                </li>
+            </ul>
+          </div>
+          
+          <hr style="border: 0; border-top: 1px solid rgba(11,44,116,0.08); margin: 30px 0;">
+
+          <div>
+            <h3 style="font-size: 24px; margin-top: 0; margin-bottom: 8px; font-weight: 800; color: var(--accent);">
+                A Legacy of Professional Success
+            </h3>
+            <p class="lead" style="font-size: 17px; margin-bottom: 0; color: var(--muted);">
+                The commitment to academic excellence extends to Mr. Srivastava’s family, who embody the successful outcomes of a strong educational foundation:
+            </p>
+            <div style="display: flex; gap: 40px; margin-top: 20px;">
+                <div style="flex: 1;">
+                    <p style="font-weight: 800; font-size: 16px; color: var(--txt); margin: 0 0 4px;">Son's Achievement:</p>
+                    <p class="muted" style="font-size: 15px; margin: 0;">
+                        A **B.Tech graduate from HBTI Kanpur**, currently holding a position as **Vice President in a leading Investment Bank**.
+                    </p>
+                </div>
+                <div style="flex: 1;">
+                    <p style="font-weight: 800; font-size: 16px; color: var(--txt); margin: 0 0 4px;">Daughter's Achievement:</p>
+                    <p class="muted" style="font-size: 15px; margin: 0;">
+                        An **MBA in Human Resources**, successfully contributing to her field and professional career.
+                    </p>
+                </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="courses">
+        <div class="grid-header">
+          <div class="kicker">Structured Learning Programs</div>
+          <h2 class="section-title">Our Mathematics & Science Courses</h2>
+          <p class="muted">Aligning with UP and CBSE Board syllabi for proven results.</p>
+        </div>
+        <div class="grid-3">
+          <div class="card course-card">
+            <div class="title">Class IX & X – Mathematics and Science</div>
+            <p class="muted" style="font-size:13px">UP & CBSE Board Curriculum</p>
+            <ul>
+              <li><span class="check-icon">✓</span> Complete NCERT syllabus coverage.</li>
+              <li><span class="check-icon">✓</span> Concept-based learning with personal attention.</li>
+              <li><span class="check-icon">✓</span> Regular assessments and doubt-clearing.</li>
+              <li><span class="check-icon">✓</span> Focus on strong conceptual basics.</li>
+            </ul>
+            <a href="tel:+919795820448" class="btn btn-call" style="margin-top:16px;width:100%;justify-content:center;padding:10px 18px">Inquire Now</a>
+          </div>
+
+          <div class="card course-card">
+            <div class="title">Class XI – Mathematics</div>
+            <p class="muted" style="font-size:13px">Intermediate Level</p>
+            <ul>
+              <li><span class="check-icon">✓</span> In-depth coverage of advanced topics.</li>
+              <li><span class="check-icon">✓</span> Preparation for competitive exams (JEE Foundation).</li>
+              <li><span class="check-icon">✓</span> Focus on problem-solving and application.</li>
+              <li><span class="check-icon">✓</span> Comprehensive study materials provided.</li>
+            </ul>
+            <a href="tel:+919795820448" class="btn btn-call" style="margin-top:16px;width:100%;justify-content:center;padding:10px 18px">Inquire Now</a>
+          </div>
+
+          <div class="card course-card">
+            <div class="title">Class XII – Mathematics</div>
+            <p class="muted" style="font-size:13px">Board & Entrance Preparation</p>
+            <ul>
+              <li><span class="check-icon">✓</span> Board exam-oriented teaching methodology.</li>
+              <li><span class="check-icon">✓</span> Regular mock tests and past paper analysis.</li>
+              <li><span class="check-icon">✓</span> Strategic preparation for final examination.</li>
+              <li><span class="check-icon">✓</span> Focus on time management and accuracy.</li>
+            </ul>
+            <a href="tel:+919795820448" class="btn btn-call" style="margin-top:16px;width:100%;justify-content:center;padding:10px 18px">Inquire Now</a>
+          </div>
+        </div>
+      </section>
+        
+        <div class="grid-3" style="grid-template-columns: 1fr 1fr; gap: 30px; margin-top: 30px;">
+          <div id="location" style="display: flex; flex-direction: column; gap: 20px;">
+            <div class="card" style="padding: 30px; border-left: 5px solid var(--accent); display:flex; gap: 20px; align-items: center;">
+                <span style="font-size: 32px; color: var(--accent);" aria-hidden="true">📍</span>
+                <div>
+                    <h3 style="margin: 0; font-size: 18px; font-weight: 800;">Our Location</h3>
+                    <p class="muted" style="margin: 4px 0 0; font-size: 15px; font-weight: 600;">230/2 Shastri Nagar, Kanpur, Uttar Pradesh 208005</p>
+                </div>
+            </div>
+
+            <div class="mapwrap">
+              <iframe 
+                width="100%" 
+                height="100%" 
+                frameborder="0" 
+                style="border:0"
+                src="https://www.google.com/maps/place/SD+Maths+Classes/@26.4678643,80.2965651,17z/data=!3m1!4b1!4m6!3m5!1s0x399c39d54c561a7f:0x9b4c27abb2b7e143!8m2!3d26.4678643!4d80.2965651!16s%2Fg%2F11h8v_2h84?entry=ttu&g_ep=EgoyMDI1MTAyMi4wIKXMDSoASAFQAw%3D%3D" 
+                loading="lazy" 
+                allowfullscreen>
+              </iframe>
+            </div>
+          </div>
+
+          <div style="display: flex; flex-direction: column; gap: 20px; align-self: start;">
+            
+            <div class="card" style="padding: 30px; background: var(--accent); color: #fff; box-shadow: 0 12px 30px rgba(37,99,235,0.25);">
+                <h3 style="margin: 0 0 8px; font-size: 18px; font-weight: 800; color: #fff;">Immediate Contact (Call)</h3>
+                <div style="font-weight: 900; font-size: 24px; display:flex; align-items: center; gap: 10px;">
+                    <span aria-hidden="true">📞</span> 
+                    <a href="tel:+919795820448" style="color: #fff; text-decoration: none;">+91 97958 20448</a>
+                </div>
+                <p style="margin-top: 8px; font-size: 14px; opacity: 0.9;">Available during standard working hours for admissions.</p>
+            </div>
+            
+            <div class="card" style="padding: 30px; border: 1px solid var(--accent-2);">
+                <h3 style="margin: 0 0 8px; font-size: 18px; font-weight: 800; color: var(--txt);">Send an Inquiry (Email)</h3>
+                <div style="font-weight: 700; font-size: 18px; display:flex; align-items: center; gap: 10px;">
+                    <span style="color: var(--accent);" aria-hidden="true">📧</span> 
+                    <a href="mailto:anilsrivastava7332@gmail.com" style="color: var(--accent); text-decoration: none;">anilsrivastava7332@gmail.com</a>
+                </div>
+                <p class="muted" style="margin-top: 8px; font-size: 14px;">We aim to respond to all email inquiries within one business day.</p>
+            </div>
+
+          </div>
+        </div>
+      </section>
+    </div>
   </main>
 
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <div>© 2025 SD Mathematics Classes</div>
-      <div>Designed for Academic Excellence</div>
-    </div>
-  </footer>
+  <div class="wrap-content">
+    <footer>
+      © 2025 SD Mathematics Classes | Designed for Academic Excellence.
+    </footer>
+  </div>
 
-  <script src="script.js"></script>
+<script>
+  function toggleMobile(){
+    const el = document.getElementById('mobileNav');
+    el.style.display = (el.style.display === 'block') ? 'none' : 'block';
+  }
+  // smooth internal scroll
+  document.querySelectorAll('a[href^="#"]').forEach(a=>{
+    a.addEventListener('click', function(e){
+      const href = this.getAttribute('href');
+      if(href && href.startsWith('#') && href.length>1){
+        e.preventDefault();
+        const target = document.querySelector(href);
+        if(target){
+          window.scrollTo({
+            top: target.offsetTop - 20, // offset for fixed header if needed
+            behavior: 'smooth'
+          });
+        }
+      }
+    });
+  });
+</script>
 </body>
 </html>
