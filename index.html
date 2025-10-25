@@ -16,9 +16,14 @@
     --radius:14px;
     --max:1200px;
     --txt:#0b1220;
+    /* --- PROFESSIONAL COLOR REFINEMENTS --- */
+    --primary-red: #c0392b; /* Deep Crimson for a more professional look than bright red */
+    --primary-shadow: rgba(192, 57, 43, 0.4); /* Shadow to match the new primary color */
   }
   *{box-sizing:border-box}
-  html,body{height:100%;margin:0;font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:var(--txt);-webkit-font-smoothing:antialiased;background:linear-gradient(180deg,#f7fbff 0%, #eef6ff 80%)}
+  html,body{height:100%;margin:0;font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:var(--txt);-webkit-font-smoothing:antialiased;background:linear-gradient(180deg,#f7fbff 0%, #eef6ff 80%);
+    font-size: 16px; /* Set a base font size for better readability on desktop */
+  }
   a{color:inherit}
   
   /* Standard content wrapper for header, footer, and sections */
@@ -32,7 +37,7 @@
   .hero-strong{
     background:#05294a;
     color:#fff;
-    padding:48px 0;
+    padding:60px 0; /* Increased vertical padding for a grander feel */
     margin-top: 18px; 
   }
   .hero-strong .wrap-inner-content{
@@ -46,13 +51,23 @@
   }
   
   .hero-strong .kicker{color:rgba(255,255,255,0.85);font-weight:600;letter-spacing:0.06em;margin-bottom:8px;font-size:0.85rem;text-transform: uppercase;}
-  .hero-strong h1{font-size:2.8rem;margin:0 0 10px;color:#fff;line-height:1.1;font-weight: 900;}
+  .hero-strong h1{font-size:3rem; /* Slightly larger title */ margin:0 0 10px;color:#fff;line-height:1.1;font-weight: 900;}
   .badge{display:inline-block;background:#ffb703;color:#05294a;padding:8px 14px;border-radius:999px;font-weight:800;margin-bottom:18px; font-size: 0.95rem;}
   .short{color:rgba(255,255,255,0.9);margin:0 0 28px;line-height:1.55; font-size: 1.1rem;}
   .ctas{display:flex;gap:12px; flex-wrap: wrap;}
-  .cta{display:inline-flex;align-items:center;gap:8px;padding:12px 18px;border-radius:12px;text-decoration:none;font-weight:700; transition: background 0.3s, box-shadow 0.3s;}
-  .primary{background:#ff6b6b;color:#fff;border:0;box-shadow:0 8px 28px rgba(0,0,0,0.3); font-weight: 800;}
-  .primary:hover{background:#ff5252;box-shadow:0 6px 20px rgba(0,0,0,0.4);}
+  .cta{display:inline-flex;align-items:center;gap:8px;padding:12px 22px; /* Slightly more horizontal padding */ border-radius:12px;text-decoration:none;font-weight:700; transition: background 0.3s, box-shadow 0.3s;}
+  /* --- New Professional Primary CTA Styles --- */
+  .primary{
+    background:var(--primary-red);
+    color:#fff;
+    border:0;
+    box-shadow:0 10px 30px var(--primary-shadow); /* More prominent, color-matched shadow */
+    font-weight: 800;
+  }
+  .primary:hover{
+    background:#a52a22; /* Slightly darker hover state */
+    box-shadow:0 6px 20px var(--primary-shadow);
+  }
   .secondary{background:transparent;color:#fff;border:2px solid rgba(255,255,255,0.25);}
   .secondary:hover{background:rgba(255,255,255,0.1);}
   .hero-right{background:rgba(255,255,255,0.06);padding:20px;border-radius:12px; border: 1px solid rgba(255,255,255,0.1);}
@@ -89,7 +104,13 @@
 
 
   /* Header */
-  header{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:8px 0}
+  header{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:16px;
+    padding:16px 0; /* INCREASED VERTICAL PADDING */
+  }
   .brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:inherit}
   
   /* RESTORED original text logo styles */
@@ -97,14 +118,17 @@
     width:54px;height:54px;border-radius:12px;background:linear-gradient(135deg,var(--accent),var(--accent-2));display:grid;place-items:center;color:#042033;font-weight:900;font-size:18px;box-shadow:0 8px 30px rgba(37,99,235,0.12)
   }
 
-  .brand .title{font-weight:800}
+  .brand .title{
+    font-weight:800;
+    font-size: 1.3rem; /* INCREASED FONT SIZE */
+  }
   nav{display:flex;gap:14px;align-items:center}
   nav a{color:var(--muted);text-decoration:none;padding:8px 10px;border-radius:10px;font-weight:600}
   nav a:hover{color:var(--accent);background:rgba(37,99,235,0.04)}
   .mobile-toggle{display:none;border:0;background:none;font-size:20px;color:var(--muted)}
 
   /* Sections */
-  section{margin-top:48px}
+  section{margin-top:64px; /* Slightly more section spacing for elegance */ } 
   .card{background:var(--card);padding:24px;border-radius:14px;border:1px solid rgba(11,44,116,0.04);box-shadow:0 10px 30px rgba(10,20,40,0.03)}
   .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
   @media (max-width:980px){.grid-3{grid-template-columns:repeat(2,1fr)}}
@@ -124,7 +148,7 @@
   }
 
   .grid-header{margin-bottom:20px;text-align:center}
-  h2.section-title{margin:0 0 4px;font-size:32px;font-weight:800}
+  h2.section-title{margin:0 0 4px;font-size:36px; /* Slightly larger heading for professionalism */ font-weight:800}
   .muted{color:var(--muted)}
   .text-center{text-align:center}
 
@@ -136,7 +160,7 @@
     display:flex;
     align-items:center;
     gap:8px;
-    font-size:14px;
+    font-size:15px; /* Slightly larger font for course features */
     color:var(--muted);
   }
   .check-icon{color:var(--accent);font-weight:800}
@@ -144,7 +168,7 @@
   /* Map */
   .mapwrap{border-radius:14px;overflow:hidden;border:1px solid rgba(11,44,116,0.04);height:280px;box-shadow:0 10px 30px rgba(10,20,40,0.03);margin-top:20px}
 
-  footer{margin-top:48px;text-align:center;color:var(--muted);font-size:13px;padding-bottom:16px;border-top:1px solid rgba(11,44,116,0.04);padding-top:24px}
+  footer{margin-top:64px; /* More space above footer */ text-align:center;color:var(--muted);font-size:13px;padding-bottom:16px;border-top:1px solid rgba(11,44,116,0.04);padding-top:24px}
 
   /* Mobile behavior */
   @media (max-width:640px){
@@ -156,8 +180,8 @@
     .hero{gap:14px}
     .hero-actions{flex-direction:column}
     .btn{width:100%;justify-content:center}
-    section{margin-top:32px}
-    h2.section-title{font-size:24px}
+    section{margin-top:40px} /* Reduced spacing for mobile */
+    h2.section-title{font-size:28px}
     .lead{font-size:16px}
   }
 </style>
@@ -199,7 +223,7 @@
           <div class="kicker">BUILDING STRONG FOUNDATIONS IN MATHEMATICS & SCIENCE</div>
           <h1 id="hero-heading">Academic Mastery in Kanpur</h1>
           <div class="badge">40+ Years Of Excellence</div>
-          <p class="short">Expert tuition for Class IX & X (Maths & Science)** and **XI & XII (Maths). UP & CBSE aligned, concept-based, personalised attention.</p>
+          <p class="short">Expert tuition for Class IX & X (Maths & Science) and XI & XII (Maths). UP & CBSE aligned, concept-based, personalised attention.</p>
           <div class="ctas">
             <a class="cta primary" href="tel:+919795820448">📞 Call +91 97958 20448</a>
             <a class="cta secondary" href="#courses">View Course Details</a>
@@ -232,7 +256,7 @@
                 Academic Credentials and Experience
             </h3>
             <p class="lead" style="font-size: 17px; margin-bottom: 12px; font-weight: 600; color: var(--muted);">
-                With over **40 years of dedication** to Mathematics and Science, Mr. Anil Srivastava is not just a teacher, but a career mentor. He is an esteemed **Ex-Examiner for the UP Education Board** with more than 30 years of experience in state-level evaluations.
+                With over 40 years of dedication to Mathematics and Science, Mr. Anil Srivastava is not just a teacher, but a career mentor. He is an esteemed Ex-Examiner for the UP Education Board with more than 30 years of experience in state-level evaluations.
             </p>
             <p class="muted" style="font-size: 15px; margin-bottom: 0;">
                 His tenure includes teaching at prominent institutions such as:
